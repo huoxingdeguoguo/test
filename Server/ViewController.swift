@@ -7,13 +7,14 @@
 //
 
 import Cocoa
-
+// MARK:- banben ceshi
 class ViewController: NSViewController {
 
+    @IBOutlet weak var hintLabel: NSTextField!
     override func viewDidLoad() {
+        fileprivate let server = ServerManager()
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+ 
     }
 
     override var representedObject: Any? {
@@ -22,6 +23,14 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func startRunning(_ sender: NSButton) {
+        server.startRunning()
+        hintLabel.stringValue = "服务器已开启"
+    }
+    @IBAction func stopRunning(_ sender: NSButton) {
+        servent
+        hintLabel.stringValue = "服务器已关闭"
+    }
 
 }
 
